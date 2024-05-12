@@ -50,7 +50,7 @@ Experimente o NPC Studio hoje e revolucione a forma como você cria e interpreta
 # Não esqueça de colocar sua API_KEY no BuildConfig:
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <img src="https://pin.it/fE0N5HhB3" alt="logo npc-studio" width="150" class="rounded-profile">
+  <img src="https://br.pinterest.com/pin/686869380700394385/sent/?invite_code=b78c837fe3624ec881d2a16394240f70&sender=686869518076613564&sfo=1 " alt="logo npc-studio" width="150" class="rounded-profile">
 </div>
 
 
