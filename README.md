@@ -33,6 +33,14 @@ Experimente o NPC Studio hoje e revolucione a forma como você cria e interpreta
 - [x] Adicionar habilidades ao NPC
 - [x] Exportar NPC.
 
+# link do projeto do colab :
+
+<div>
+  <a href="https://github.com/AshSlake/NPC-Studio-Com-IA-Gemini"><img src="https://img.shields.io/badge/github-3b4c52.svg?style=for-the-badge&logo=github&logoColor=white"></a>
+</div>  
+
+-------
+
   - Status do projeto APP:
 - [x] Interface principal do app ;
 - [x] Funcionalidade de os NPCs;
