@@ -47,6 +47,14 @@ Experimente o NPC Studio hoje e revolucione a forma como você cria e interpreta
 - [x] Adicionar habilidades ao NPC ;
 - [x] Exportar NPC.
 ---
+# Não esqueça de colocar sua API_KEY no BuildConfig:
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="https://pin.it/fE0N5HhB3" alt="logo npc-studio" width="150" class="rounded-profile">
+</div>
+
+
+----
 
 **Externo**:
 - Gemini
