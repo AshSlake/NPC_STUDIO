@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fundo_preto_c_borda"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="insira as informações"
+        android:textColor="@color/white"
+        android:layout_marginTop="100dp"
+        android:textSize="35sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <EditText
+        android:id="@+id/nome_npc"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:textColorHint="@color/white"
+        android:hintSize="50sp"
+        android:hint="Nome do npc"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <EditText
+        android:id="@+id/idade_npc"
+        android:inputType="number"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:hintSize="50sp"
+        android:hint="Idade"
+        android:textColorHint="@color/white" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <GridLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masculino" />
+
+    <Switch
+        android:id="@+id/escolha_sexo"
+        android:checked="false"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feminino" />
+
+    </GridLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+
+    <GridLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <GridLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp">
+
+
+        <TextView
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="O npc tem alguma habilidade?" />
+
+        <Switch
+            android:id="@+id/escolha_habilidade"
+            android:checked="false"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    </GridLayout>
+
+
+
+        <EditText
+            android:id="@+id/qual_habilidade_npc"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hintTextColor="@color/black"
+            android:hintSize="50sp"
+            android:hint="qual é a habilidade?"
+            android:textColorHint="@color/white" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp">
+
+
+            <TextView
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais alguma informação sobre o npc?" />
+
+            <Switch
+                android:id="@+id/escolha_informacoes"
+                android:checked="false"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        </GridLayout>
+
+
+
+        <EditText
+            android:id="@+id/informacoes_npc"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hintTextColor="@color/black"
+            android:hintSize="50sp"
+            android:hint="qual é a informação?"
+            android:textColorHint="@color/white" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp">
+
+
+            <TextView
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="O npc tem algum momento marcante ?" />
+
+            <Switch
+                android:id="@+id/escolha_momento"
+                android:checked="false"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        </GridLayout>
+
+
+
+        <EditText
+            android:id="@+id/momento_marcante_npc"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hintTextColor="@color/black"
+            android:hintSize="50sp"
+            android:hint="qual é o momento marcante?"
+            android:textColorHint="@color/white" />
+
+    </GridLayout>
+
+    <EditText
+        android:id="@+id/tipo_rpg"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:hintTextColor="@color/black"
+        android:hintSize="50sp"
+        android:hint="qual é o tipo do rpg?"
+        android:textColorHint="@color/white" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <Button
+        android:id="@+id/criar_npc_ficha"
+        android:text="Criar NPC"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"/>
+
+    <Button
+        android:id="@+id/voltar_ficha"
+        android:text="Voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"/>
+
+
+</LinearLayout>
