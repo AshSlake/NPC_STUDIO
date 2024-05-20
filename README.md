@@ -27,6 +27,12 @@ Experimente o NPC Studio hoje e revolucione a forma como você cria e interpreta
   <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/android-studio-icon.png" alt="logo studio" width="150">
 </div>
 
+# Não esqueça de adicionar sua API_KEY no diretorio BuildConfig:
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="https://i.pinimg.com/736x/5a/e2/15/5ae21582addebcc568ca79b8d340bd9f.jpg" alt="logo gemini" width="150">
+</div>
+
 - Status do projeto colab:
 - [x] teste para notebook/colab
 - [x] Funcionalidade de os NPCs;
