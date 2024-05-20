@@ -8,7 +8,7 @@ import com.example.npc_studio.Modelo_Ficha;
 import com.example.npc_studio.R;
 
 public class FichaHelper {
-    private EditText nome_npc,idade_npc,habilidades_npc,informacoes_npc,momento_marcante_npc,tipo_rpg;
+    private EditText nome_npc, idade_npc, habilidades_npc, informacoes_npc, momento_marcante_npc, tipo_rpg;
     private Switch sexo_npc;
     private GeminiPro geminiPro;
 
@@ -30,19 +30,19 @@ public class FichaHelper {
         Modelo_Ficha ficha = new Modelo_Ficha();
 
         // Nome
-        ficha.setNome(gerarConteúdoSeVazio(nome_npc, "Gere um nome para um NPC "));
+        ficha.setNome(gerarConteudoSeVazio(nome_npc, "Gere um nome para um NPC "));
 
         // Idade
-        ficha.setIdade(gerarConteúdoSeVazio(idade_npc, "Gere uma idade para um NPC "));
+        ficha.setIdade(gerarConteudoSeVazio(idade_npc, "Gere uma idade para um NPC "));
 
         // Habilidades
-        ficha.setHabilidades(gerarConteúdoSeVazio(habilidades_npc, "Gere habilidades para um NPC "));
+        ficha.setHabilidades(gerarConteudoSeVazio(habilidades_npc, "Gere habilidades para um NPC "));
 
         // Informações
-        ficha.setInformacoes(gerarConteúdoSeVazio(informacoes_npc, "Gere informações adicionais para um NPC "));
+        ficha.setInformacoes(gerarConteudoSeVazio(informacoes_npc, "Gere informações adicionais para um NPC "));
 
         // Momento Marcante
-        ficha.setMomento_marcante(gerarConteúdoSeVazio(momento_marcante_npc, "Gere um momento marcante para um NPC "));
+        ficha.setMomento_marcante(gerarConteudoSeVazio(momento_marcante_npc, "Gere um momento marcante para um NPC "));
 
         // Tipo de RPG
         ficha.setTipo_de_rpg(tipo_rpg.getText().toString());
@@ -54,7 +54,7 @@ public class FichaHelper {
             ficha.setSexo("Masculino");
         }
         // Preparar prompt para o Gemini Pro
-        String prompt = "Gere um resumo conciso para um NPC com as seguintes características:\n" +
+        String prompt = "Gere um resumo do npc com no maximo 10 linhas com as seguintes informações do npc :\n" +
                 "Nome: " + ficha.getNome() + "\n" +
                 "Idade: " + ficha.getIdade() + "\n" +
                 "Sexo: " + ficha.getSexo() + "\n" +
@@ -80,9 +80,9 @@ public class FichaHelper {
         return ficha;
     }
 
-    private String gerarConteúdoSeVazio(final EditText editText, String prompt) {
+    private String gerarConteudoSeVazio(final EditText editText, String prompt) {
         String texto = editText.getText().toString();
-        if (texto.isEmpty()) {
+        if (texto.isEmpty()|texto.equals("")) {
             geminiPro.getResponse(prompt, new ResponseCallBack() {
                 @Override
                 public void onResponse(String resultText) {
@@ -98,4 +98,5 @@ public class FichaHelper {
         }
         return texto;
 
+    }
 }

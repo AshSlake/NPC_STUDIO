@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:backgroundTint="@color/black"
+    android:orientation="vertical">
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:id="@+id/nome_npc_ficha"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_height="20dp"
+            android:layout_width="match_parent" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:text="sexo:"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_height="20dp"
+        android:layout_width="match_parent" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/white"
+        android:id="@+id/npc_sexo_ficha"
+        android:textStyle="bold" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:text="Idade:"
+            android:textStyle="bold" />
+
+    <Space
+        android:layout_height="20dp"
+        android:layout_width="match_parent" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/white"
+            android:id="@+id/npc_idade_ficha"
+            android:textStyle="bold" />
+
+
+
+    <Space
+        android:layout_height="20dp"
+        android:layout_width="match_parent" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:text="Hablidiades:"
+            android:textStyle="bold" />
+
+    <Space
+        android:layout_height="20dp"
+        android:layout_width="match_parent" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/white"
+            android:id="@+id/npc_habilidades_ficha"
+            android:textStyle="bold" />
+
+
+    <Space
+        android:layout_height="20dp"
+        android:layout_width="match_parent" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:text="informações:"
+            android:textStyle="bold" />
+
+    <Space
+        android:layout_height="20dp"
+        android:layout_width="match_parent" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/white"
+            android:id="@+id/npc_informacoes_ficha"
+            android:textStyle="bold" />
+
+    <Space
+        android:layout_height="20dp"
+        android:layout_width="match_parent" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:text="momento marcante:"
+            android:textStyle="bold" />
+
+    <Space
+        android:layout_height="20dp"
+        android:layout_width="match_parent" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/white"
+            android:id="@+id/npc_momento_marcante_ficha"
+            android:textStyle="bold" />
+
+
+    <Space
+        android:layout_height="20dp"
+        android:layout_width="match_parent" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:text="tipo de rpg:"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_height="20dp"
+        android:layout_width="match_parent" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/white"
+        android:id="@+id/npc_tipo_rpg_ficha"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:text="resumo do npc:"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_height="20dp"
+        android:layout_width="match_parent" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/white"
+        android:id="@+id/npc_resumo_ficha"
+        android:textStyle="bold" />
+
+</LinearLayout>

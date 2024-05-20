@@ -18,12 +18,16 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.npc_studio.Adapters.FichaAdapter;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class FichaPronta extends AppCompatActivity {
 
     private ListView fichaPronta;
     private Button salvar_ficha;
+    private long idDNPC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,40 +38,35 @@ public class FichaPronta extends AppCompatActivity {
                         WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.ficha_pronta);
 
+        Intent intent = getIntent();
+        idDNPC = intent.getLongExtra("idDoNPC", 0);
+
         fichaPronta = findViewById(R.id.list_ficha_npc);
         salvar_ficha = findViewById(R.id.btn_salvar_npc);
-
-        // Receber a ficha da Intent
-        Intent intent = getIntent();
-        Modelo_Ficha ficha = intent.getParcelableExtra("ficha");
-
-        // Criar lista para o ListView
-        ArrayList<String> infoFicha = new ArrayList<>();
-        infoFicha.add("Nome: " + ficha.getNome());
-        infoFicha.add("Idade: " + ficha.getIdade());
-        infoFicha.add("Sexo: " + ficha.getSexo());
-        infoFicha.add("Habilidades: " + ficha.getHabilidades());
-        infoFicha.add("Informações: " + ficha.getInformacoes());
-        infoFicha.add("Momento Marcante: " + ficha.getMomento_marcante());
-        infoFicha.add("Tipo de RPG: " + ficha.getTipo_de_rpg());
-        infoFicha.add("Resumo: " + ficha.getResumo()); // Adicionar o resumo gerado
-
-        // Criar ArrayAdapter e setar no ListView
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, infoFicha);
-        fichaPronta.setAdapter(adapter);
 
         salvar_ficha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FichasDAO dao = new FichasDAO(FichaPronta.this);
-                dao.inserirFicha(ficha);
                 finish();
             }
         });
 
+    }
 
+    private void carregaFicha() {
+        FichasDAO dao = new FichasDAO(this);
+        List<Modelo_Ficha> ficha = dao.buscarFichaPorId(idDNPC);
+        dao.close();
 
+        FichaAdapter adapter =
+                new FichaAdapter(this, R.layout.list_item_ficha, ficha);
+        fichaPronta.setAdapter(adapter);
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        carregaFicha();
     }
 
 }

@@ -9,6 +9,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
+import java.lang.System;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,6 +21,7 @@ public class criar_npc extends AppCompatActivity {
     private Button criar_npc,voltar;
 
     private FichaHelper helper;
+    private Long idNPC;
 
 
     @Override
@@ -50,10 +52,16 @@ public class criar_npc extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Modelo_Ficha ficha = helper.pegaFicha();
+                FichasDAO dao = new FichasDAO(criar_npc.this);
+                dao.inserirFicha(ficha);
+                dao.close();
+
+                idNPC = ficha.getId();
 
                 Intent intent = new Intent(criar_npc.this, FichaPronta.class);
-                intent.putExtra("ficha", (CharSequence) ficha); // Adiciona a ficha como extra na intent
+                intent.putExtra("idDoNPC", idNPC);
 
+                System.out.println("NPC " + ficha.getNome() + " foi salvo com sucesso!"+ "com id : " + idNPC);
                 startActivity(intent);
             }
         });
@@ -77,7 +85,8 @@ public class criar_npc extends AppCompatActivity {
                     if (isChecked) {
                         habilidades_npc.setVisibility(View.VISIBLE);
                 } else {
-                    habilidades_npc.setText("");
+                        habilidades_npc.setVisibility(View.GONE);
+                        habilidades_npc.setText("");
                 }
             }
         });
@@ -91,6 +100,7 @@ public class criar_npc extends AppCompatActivity {
                 if (isChecked) {
                     informacoes_npc.setVisibility(View.VISIBLE);
                 } else {
+                    informacoes_npc.setVisibility(View.GONE);
                     informacoes_npc.setText("");
                 }
             }
@@ -105,6 +115,7 @@ public class criar_npc extends AppCompatActivity {
                 if (isChecked) {
                     momento_marcante_npc.setVisibility(View.VISIBLE);
                 } else {
+                    momento_marcante_npc.setVisibility(View.GONE);
                     momento_marcante_npc.setText("");
                 }
             }

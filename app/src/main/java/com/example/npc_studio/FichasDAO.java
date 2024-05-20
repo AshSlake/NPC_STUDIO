@@ -6,8 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.npc_studio.Modelo_Ficha;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -134,5 +132,71 @@ public class FichasDAO extends SQLiteOpenHelper {
         return fichas;
     }
 
-    // Outros métodos para atualizar, excluir, buscar por ID, etc. podem ser adicionados conforme necessário
+    public List<Modelo_Ficha> buscarFichaPorId(long id) {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE " + COLUMN_ID + " = ?", new String[]{String.valueOf(id)});
+
+        Modelo_Ficha ficha = null;
+
+        if (cursor.moveToFirst()) {
+            ficha = new Modelo_Ficha();
+
+            int nomeIndex = cursor.getColumnIndex(COLUMN_NOME);
+            if (nomeIndex >= 0) {
+                ficha.setNome(cursor.getString(nomeIndex));
+            }
+
+            int idadeIndex = cursor.getColumnIndex(COLUMN_IDADE);
+            if (idadeIndex >= 0) {
+                ficha.setIdade(cursor.getString(idadeIndex));
+            }
+
+            int sexoIndex = cursor.getColumnIndex(COLUMN_SEXO);
+            if (sexoIndex >= 0) {
+                ficha.setSexo(cursor.getString(sexoIndex));
+            }
+
+            int habilidadesIndex = cursor.getColumnIndex(COLUMN_HABILIDADES);
+            if (habilidadesIndex >= 0) {
+                ficha.setHabilidades(cursor.getString(habilidadesIndex));
+            }
+
+            int informacoesIndex = cursor.getColumnIndex(COLUMN_INFORMACOES);
+            if (informacoesIndex >= 0) {
+                ficha.setInformacoes(cursor.getString(informacoesIndex));
+            }
+
+            int momentoMarcanteIndex = cursor.getColumnIndex(COLUMN_MOMENTO_MARCANTE);
+            if (momentoMarcanteIndex >= 0) {
+                ficha.setMomento_marcante(cursor.getString(momentoMarcanteIndex));
+            }
+
+            int tipoRPGIndex = cursor.getColumnIndex(COLUMN_TIPO_RPG);
+            if (tipoRPGIndex >= 0) {
+                ficha.setTipo_de_rpg(cursor.getString(tipoRPGIndex));
+            }
+
+            int resumoIndex = cursor.getColumnIndex(COLUMN_RESUMO);
+            if (resumoIndex >= 0) {
+                ficha.setResumo(cursor.getString(resumoIndex));
+            }
+        }
+
+        cursor.close();
+        db.close();
+
+        List<Modelo_Ficha> fichas = (List<Modelo_Ficha>) ficha;
+        return fichas;
+    }
+
+    public void deletaficha(long id) {
+        SQLiteDatabase db = getWritableDatabase();
+
+        String selection = COLUMN_ID + " = ?";
+        String[] selectionArgs = {String.valueOf(id)};
+
+        db.delete(TABLE_NAME, selection, selectionArgs);
+        db.close();
+    }
+
 }
