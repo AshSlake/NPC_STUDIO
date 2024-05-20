@@ -33,7 +33,9 @@ Experimente o NPC Studio hoje e revolucione a forma como você cria e interpreta
   <img src="https://i.pinimg.com/736x/d5/26/17/d5261716a0817b6d3040f70a66d8fce5.jpg" alt="api_key" width="450">
 </div>
 
-- Status do projeto colab:
+
+
+# Status do projeto colab:
 - [x] teste para notebook/colab
 - [x] Funcionalidade de os NPCs;
 - [x] Adicionar habilidades ao NPC
