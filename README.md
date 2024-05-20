@@ -1,5 +1,5 @@
 <div style="display: flex; justify-content: center; align-items: center;">
-  <img src="https://i.pinimg.com/736x/d5/26/17/d5261716a0817b6d3040f70a66d8fce5.jpg" alt="logo npc-studio" width="250" class="rounded-profile">
+  <img src="https://i.pinimg.com/736x/98/c7/e5/98c7e5317525b6e5d6711617f5cf0acb.jpg" alt="logo npc-studio" width="150" class="rounded-profile">
 </div>
 
 # NPC Studio: Com IA Gemini
@@ -30,7 +30,7 @@ Experimente o NPC Studio hoje e revolucione a forma como você cria e interpreta
 # Não esqueça de adicionar sua API_KEY no diretorio BuildConfig:
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <img src="https://i.pinimg.com/736x/5a/e2/15/5ae21582addebcc568ca79b8d340bd9f.jpg" alt="logo gemini" width="150">
+  <img src="https://i.pinimg.com/736x/d5/26/17/d5261716a0817b6d3040f70a66d8fce5.jpg" alt="api_key" width="450">
 </div>
 
 - Status do projeto colab:
