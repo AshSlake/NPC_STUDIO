@@ -37,9 +37,9 @@ Experimente o NPC Studio hoje e revolucione a forma como você cria e interpreta
 
   - Status do projeto APP:
 - [x] Interface principal do app ;
-- [] Funcionalidade de os NPCs;
-- [] Adicionar habilidades ao NPC ;
-- [] Exportar NPC.
+- [ ] Funcionalidade de os NPCs;
+- [ ] Adicionar habilidades ao NPC ;
+- [ ] Exportar NPC.
 ---
 
 **Externo**:
