@@ -21,7 +21,6 @@ Experimente o NPC Studio hoje e revolucione a forma como você cria e interpreta
 ## **Tecnologias Utilizadas**
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <img src="https://tmpfiles.nohat.cc/m2H7K9d3N4Z5i8G6.png" alt="logo gemini" width="150">
   <img src="https://logospng.org/download/google-gemini/google-gemini-256.png" alt="logo gemini" width="150">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="logo java" width="150">
   <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/android-studio-icon.png" alt="logo studio" width="150">
@@ -34,37 +33,19 @@ Experimente o NPC Studio hoje e revolucione a forma como você cria e interpreta
 </div>
 
 
-
-# Status do projeto colab:
-- [x] teste para notebook/colab
-- [x] Funcionalidade de os NPCs;
-- [x] Adicionar habilidades ao NPC
-- [x] Exportar NPC.
-
-# link do projeto do colab :
-
-<div>
-  <a href="https://github.com/AshSlake/NPC-Studio-Com-IA-Gemini"><img src="https://img.shields.io/badge/github-3b4c52.svg?style=for-the-badge&logo=github&logoColor=white"></a>
-</div>  
-
 -------
 
   - Status do projeto APP:
 - [x] Interface principal do app ;
-- [x] Funcionalidade de os NPCs;
-- [x] Adicionar habilidades ao NPC ;
-- [x] Exportar NPC.
+- [] Funcionalidade de os NPCs;
+- [] Adicionar habilidades ao NPC ;
+- [] Exportar NPC.
 ---
 
 **Externo**:
 - Gemini
 - javascript
 - AndroidStudio
-
-**Pré-requisitos para testes**
-- baixar o apk 
-- Testar no Colab
-- Testar no Firebase Test Lab
 
 ## Autor
 
